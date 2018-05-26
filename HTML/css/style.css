@@ -1,0 +1,997 @@
+/*
+    Created: 2011-09-03
+    Last edit: 2013-02-03
+	by Adis Kurtalic
+	
+*/
+@font-face {
+  font-family: 'Abel';
+  src:  url('../fonts/abel-regular-webfont.woff') format('woff');
+}
+
+@media print {
+     body {
+    color: #000;
+    margin: 0;
+    letter-spacing: 0.2px;
+    padding: 0;
+    border-top: 10px solid #74839C;
+    background-color: #f6f6f6;
+    font: normal 16px "Abel", arial, sans-serif;
+    }
+}
+
+body {
+    color: #000;
+    margin: 0;
+    letter-spacing: 0.2px;
+    padding: 0;
+    border-top: 10px solid #74839C;
+    background-color: #f6f6f6;
+    font: normal 16px "Abel", arial, sans-serif;
+}
+
+form textarea,
+form input,
+form select {
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    padding: 6px;
+    font: normal 16px "Abel", arial, sans-serif;
+    border: 1px solid #ccc;
+    /* #fff */
+    border-bottom: 1px solid #ccc;
+    resize: none;
+    background-color: #fafafa;
+}
+
+form textarea:focus,
+form input:focus,
+form select:focus {
+    background-color: #fdfdfd;
+}
+
+
+/* Component containers
+----------------------------------*/
+
+.ui-widget {
+    font-family: "Abel", Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+    width: 200px;
+}
+
+.ui-widget .ui-widget {
+    width: 200px;
+}
+
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+    font-family: "Abel", Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+}
+
+.ui-widget-content {
+    border: 1px solid #dddddd;
+    background: #eeeeee;
+    color: #333333;
+}
+
+.ui-widget-content a {
+    color: #333333;
+}
+
+.ui-widget-header {
+    border: 1px solid #e78f08;
+    background: #f6a828 url(images/ui-bg_gloss-wave_35_f6a828_500x100.png) 50% 50% repeat-x;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.ui-widget-header a {
+    color: #ffffff;
+}
+
+ul.ui-autocomplete.ui-menu {
+    width: 300px
+}
+
+
+/* Sizes -------- */
+
+form input.small {
+    width: 40px;
+}
+
+form input.medium {
+    width: 200px;
+}
+
+form input.big {
+    width: 300px;
+}
+
+.globalForms.inLine {
+    display: inline-block;
+}
+
+.globalForms div.textInput,
+.globalForms div.radio {
+    margin: 0 0 5px;
+}
+
+.globalForms div.textInput label.keyWord,
+.globalForms div.radio label.keyWord {
+    display: inline-block;
+    width: 140px;
+    margin: 0 5px 0;
+    padding: 6px 0;
+    text-align: right;
+}
+
+.globalForms div.textInput div.input,
+.globalForms div.radio div.input {
+    display: inline-block;
+}
+
+.globalForms div.textInput div.info,
+.globalForms div.radio div.info,
+.globalForms div.select div.info {
+    margin: 0 0 10px 154px;
+    color: #666;
+    font-size: 17px;
+}
+
+
+/* Textarea ---------- */
+
+.globalForms div.textBoxInput {
+    margin: 0 0 5px;
+}
+
+.globalForms div.textBoxInput label.keyWord {
+    width: 140px;
+    display: inline-block;
+    margin: 0 0 3px;
+}
+
+.globalForms div.textBoxInput div.text {
+    display: block;
+}
+
+.globalForms div.textBoxInput div.text textarea {
+    width: 857px;
+}
+
+
+/* Separator ---------- */
+
+.globalForms div.separator {
+    height: 1px;
+    margin: 15px 0;
+}
+
+.globalForms div.separator.dashed {
+    border-bottom: 1px dashed #cecece;
+}
+
+
+/* Select ---------- */
+
+.globalForms div.select {
+    margin: 0 0 5px;
+}
+
+.globalForms div.select label.keyWord {
+    display: inline-block;
+    float: none;
+    width: 140px;
+    margin: 0 7px 0;
+    padding: 6px 0;
+    text-align: right;
+}
+
+.globalForms div.select div.input {
+    display: inline-block;
+}
+
+.globalForms select {
+    width: 214px;
+}
+
+.globalForms div.buttons {
+    margin: 0 0 0 153px;
+}
+
+.globalForms.noPadding div.buttons {
+    margin: 5px 0 0 0;
+    padding: 10px 0 0 0;
+    border-top: 1px solid #f2f2f2;
+}
+
+.globalForms div.validating {
+    margin: 0 0 20px 170px;
+    color: #e80000;
+}
+
+button.button {
+    color: #000;
+    cursor: pointer;
+    font: bold 12px "Abel", arial, sans-serif;
+    line-height: 20px;
+    font-size: 17px;
+    letter-spacing: .5px;
+    border: 0;
+    background-color: #e2e2e2;
+    padding: 6px 18px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+
+/* Hovers ---------- */
+
+.button:hover {
+    background-color: #dadada;
+}
+
+.green.button:hover {
+    background-color: #5aac1e;
+}
+
+.red.button:hover {
+    background-color: #e3151b;
+}
+
+
+/* Sizes ---------- */
+
+.small.button {
+    padding: 1.5px 3px;
+    font-size: 15px;
+}
+
+
+/* Colors ---------- */
+
+.white.button {
+    background-color: #fff;
+    padding: 0;
+}
+
+.green.button {
+    background-color: #63bd20;
+    color: #fff;
+}
+
+.red.button {
+    background-color: #ed4145;
+    color: #fff;
+}
+
+table.globalTables {
+    width: 100%;
+    position: relative;
+}
+
+table.globalTables thead tr th {
+    padding: 0 0 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 17px;
+    border-bottom: 2px solid #ccc;
+}
+
+table.globalTables thead tr th:nth-child(2) {
+    text-align: left;
+}
+
+table.globalTables tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+table.globalTables.noHover tbody tr:hover {
+    background-color: #eeeeee;
+}
+
+table.globalTables tbody tr td {
+    text-align: center;
+    padding: 5px 0;
+    line-height: 18px;
+}
+
+table.globalTables tbody tr td:nth-child(2) {
+    text-align: left;
+}
+
+table.globalTables.leftAlign tbody tr td {
+    text-align: left;
+}
+
+
+/* Types ----- */
+
+table.globalTables tbody tr td.comment div {
+    position: relative;
+    overflow: visible;
+}
+
+table.globalTables tbody tr td.comment div span.comment {
+    border: 5px solid #fff;
+    margin: 0 65px 0 0;
+    max-height: 210px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: 0 0 5px #494949;
+    -moz-box-shadow: 0 0 5px #494949;
+    -webkit-box-shadow: 0 0 5px #494949;
+    padding: 8px;
+    display: none;
+    z-index: 1000;
+    text-align: left;
+    position: absolute;
+    width: 250px;
+    color: #000;
+    bottom: 5px;
+    right: 0px;
+    background-color: #fff;
+}
+
+table.globalTables tbody tr td.comment:hover div span.comment {
+    display: block;
+}
+
+table.globalTables tbody tr td a.thumbnail {
+    position: relative;
+}
+
+table.globalTables tbody tr td a.thumbnail span.imgB {
+    background-color: #fff;
+    padding: 17px;
+    line-height: 0;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: 0 0 3px #666;
+    -moz-box-shadow: 0 0 3px #666;
+    -webkit-box-shadow: 0 0 3px #666;
+    position: absolute;
+    left: 32px;
+    bottom: -20px;
+    visibility: hidden;
+    z-index: 1;
+}
+
+table.globalTables tbody tr td a.thumbnail span.imgB img {
+    max-width: 260px;
+}
+
+table.globalTables tbody tr td a.thumbnail:hover span.imgB {
+    visibility: visible;
+}
+
+table.globalTables tbody tr td.edit {
+    padding-left: 3px;
+}
+
+table.globalTables tbody tr td.edit a {
+    visibility: hidden;
+}
+
+table.globalTables tbody tr:hover td.edit a {
+    visibility: visible;
+}
+
+div#header {
+    width: 900px;
+    margin: 0 auto 15px auto;
+    height: 75px;
+    position: relative;
+}
+
+div#header span.userInfo {
+    color: #666;
+    font-size: 17px;
+    text-shadow: 0 1px 0 #fff;
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+
+div#header span.userInfo a {
+    color: #000;
+    text-decoration: none;
+}
+
+div#header div.searchContent {
+    position: absolute;
+    font-size: 17px;
+    top: 0px;
+    left: 201px;
+    height: 70px;
+    color: #666;
+    padding: 3px;
+    width: 230px;
+    background-color: #fff;
+}
+
+div#header div.searchContent form.search input {
+    border: 1px solid #fff !important;
+    font: normal 14px "Abel", "Abel", arial, sans-serif;
+    background-color: #eee;
+    box-shadow: none;
+    padding: 5px 15px 5px 5px;
+    width: 200px;
+}
+
+
+/* Sizes ---------- */
+
+div#menu {
+    width: 1024px;
+    padding: 0 8px;
+    margin: auto;
+}
+
+div#menu ul {
+    list-style: none;
+}
+
+div#menu ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+div#menu ul li a {
+    border-bottom: 1px solid #dadada;
+    text-shadow: 0 1px 0 #fff;
+    display: inline-block;
+    color: #646464;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 7px 10px 7px 10px;
+    background-color: #f8f8f8;
+    background-image: -moz-linear-gradient(100% 100% 90deg, #e9e9e9, #f8f8f8);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#e9e9e9));
+    border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+div#menu ul li a:hover {
+    background-image: none;
+    background-color: #ddd;
+}
+
+div#menu ul li a.selected {
+    background-image: none;
+    background-color: #ddd;
+    cursor: default;
+    color: #000;
+    border-bottom: 1px solid #fff;
+}
+
+div#menu ul li.public a {
+    border-bottom: 1px solid #bbdbff;
+    background-color: #d7eaff;
+    background-image: -moz-linear-gradient(100% 100% 90deg, #d7eaff, #f8f8f8);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#d7eaff));
+}
+
+div#menu ul li.public a:hover {
+    background-image: none;
+    background-color: #d7eaff;
+}
+
+div#menu ul li.public a.selected {
+    background-image: none;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+div#menu ul li.donate a {
+    border-bottom: 1px solid #8aea6f;
+    background-color: #c9f5bc;
+    background-image: -moz-linear-gradient(100% 100% 90deg, #c9f5bc, #f8f8f8);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#c9f5bc));
+}
+
+div#menu ul li.donate a:hover {
+    background-image: none;
+    background-color: #c9f5bc;
+}
+
+div#menu ul li.donate a.selected {
+    background-image: none;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+div.subMenu {
+    text-align: left;
+    border-bottom: 3px dotted #f2f2f2;
+    margin: 0 0 10px 0;
+}
+
+div.subMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+
+div.subMenu ul li {
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+div.subMenu ul li a {
+    border: 1px solid #beee9b;
+    display: inline-block;
+    font-size: 16px;
+    padding: 3px 8px 3px 8px;
+    background-color: #CCD1DA;
+    color: #737379;
+    margin: 0;
+    text-decoration: none;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+div.subMenu ul li a.selected {
+    background-color: #468617;
+    border: 1px solid #468617;
+    color: #fff;
+}
+
+div.subMenu ul li a:hover {
+    cursor: default;
+}
+
+div.subMenu ul li a.isComponents {
+    border: 1px solid #4f971a;
+    display: inline-block;
+    font-size: 20px;
+    padding: 3px 8px 3px 8px;
+    background-color: #5fb61f;
+    color: #fff;
+    margin: 0;
+    text-decoration: none;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+div.subMenu ul li a.isComponents:hover {
+    cursor: pointer;
+    background-color: #4a8d18;
+    border: 1px solid #3f7814;
+}
+
+div.subSubMenu {
+    border-bottom: 3px dotted #f2f2f2;
+    margin: 0 0 10px 0;
+}
+
+div.subSubMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 7px 0;
+    text-align: left;
+}
+
+div.subSubMenu ul li {
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+div.subSubMenu ul li a {
+    border: 1px solid #efefef;
+    display: inline-block;
+    font-size: 17px;
+    padding: 3px 8px 3px 8px;
+    background-color: #D2D9EE;
+    color: #8B8787;
+    margin: 0;
+    text-decoration: none;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+div.subSubMenu ul li a.selected {
+    background-color: #A399D1;
+    border: 1px solid #292C73;
+    color: #000;
+}
+
+div.subSubMenu ul li a:hover {
+    cursor: default;
+}
+
+div.subSubMenu ul li a.isComponents {
+    border: 1px solid #dbdbdb;
+    display: inline-block;
+    font-size: 17px;
+    padding: 3px 8px 3px 8px;
+    background-color: #1645A3;
+    color: #CFC8C8;
+    margin: 0;
+    text-decoration: none;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+div.subSubMenu ul li a.isComponents:hover {
+    cursor: pointer;
+    background-color: #E0E0E0;
+}
+
+.message {
+    padding: 15px;
+    margin: 0 0 20px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border: 1px solid #fff;
+}
+
+
+/* Colors ---------- */
+
+.green.message {
+    background-color: #c0f48c;
+    border: 1px solid #9fee51;
+}
+
+.red.message {
+    background-color: #ffbbbb;
+    border: 1px solid #ff9797;
+}
+
+.orange.message {
+    background-color: #fcd583;
+    border: 1px solid #fbc759;
+}
+
+.blue.message {
+    background-color: #e8f7ff;
+    border: 1px solid #d9f1ff;
+}
+
+.white.message {
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+
+/* Align ---------- */
+
+.center.message {
+    text-align: center;
+}
+
+.right.message {
+    text-align: right;
+}
+
+
+/* ------------- Main colors --------------- */
+
+
+/*
+	#1e68a6
+	#f2f2f2
+	#63bd20
+	#666666
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #1e68a6;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+a.sort {
+    color: #666;
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 18px;
+    color: #333;
+    font-weight: normal;
+    padding: 0 0 20px 0;
+}
+
+h2 {
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+    padding: 0 0 20px 0;
+}
+
+div#wrapper {
+    padding: 10px;
+    width: 900px;
+    margin: auto;
+}
+
+ul.error {
+    list-style: none;
+}
+
+div#content {
+    background-color: #fff;
+    position: relative;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-bottom: 2px solid #ccc;
+    width: 870px;
+    margin: 0 auto 0 auto;
+    padding: 15px 15px 35px 15px;
+}
+
+div#copyText {
+    width: 880px;
+    font-size: 16px;
+    margin: 10px auto 30px auto;
+    padding: 0 10px 0 10px;
+    color: #3008C9;
+    height: 50px;
+    overflow: auto;
+    line-height: 20px;
+}
+
+div#copyText div.leftBox {
+    float: left;
+    height: 50px;
+}
+
+div#copyText div.leftBox .stats {
+    color: #4309EE;
+    text-shadow: 0 1px 0 rgba(248, 244, 244, 0.87);
+}
+
+div#copyText div.rightBox {
+    float: right;
+    text-align: right;
+}
+
+.totalSumWrapper {
+    border-top: 2px solid #444;
+    padding: 10px 0 0 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+table.viewComponent {
+    padding: 10px 0 10px 0;
+}
+
+tr.bordered {
+    border-bottom: 1px solid #000;
+}
+
+table.viewComponent tr td {
+    color: #777;
+    height: 25px;
+    width: 250px;
+}
+
+table.viewComponent tr td.what {
+    font-weight: bold;
+    color: #666;
+    width: 120px;
+}
+
+div.aboutComponentHeader {
+    overflow: auto;
+}
+
+div.componentComment {
+    max-height: 223px;
+    width: 420px;
+    color: #444;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 20px;
+}
+
+div.componentGallery {
+    float: right;
+    width: 430px;
+}
+
+div.componentGallery div.bigImage {
+    overflow: auto;
+    float: right;
+    text-align: right;
+    overflow: auto;
+}
+
+div.componentGallery div.bigImage img {
+    border: 2px solid #f2f2f2;
+    max-width: 158px;
+    min-height: 158px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+div.componentGallery div.bigImage div.componentNoImg {
+    width: 158px;
+    text-align: center;
+    line-height: 90px;
+    border: 2px solid #e9e9e9;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #888;
+    font-size: 16px;
+    text-shadow: 0 1px 0 #fff;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+div.componentGallery div.smallImages {
+    float: left;
+    text-align: right;
+}
+
+div.componentGallery div.smallImages ul {
+    list-style: none;
+}
+
+div.componentGallery div.smallImages ul li {
+    line-height: 0;
+    list-style: none;
+    margin: 0 0 0 5px;
+    display: inline-block;
+    background-color: #fff;
+}
+
+div.componentGallery div.smallImages ul li img {
+    border: 2px solid #f2f2f2;
+    max-height: 58px;
+    max-width: 58px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+div.componentInfo {
+    margin: 10px 0 0 0;
+    border-top: 3px dotted #f2f2f2;
+}
+
+div.componentLog {
+    background-color: #f9f9f9;
+    border: 4px dotted #f0f0f0;
+    padding: 15px;
+    margin: 15px 0 0 0;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+div.componentLog div.logsMenu {
+    text-align: right;
+    margin: 10px 0;
+}
+
+div.compontntLog div.logsAll {
+    display: none;
+}
+
+.main_category {
+    background-color: #d1e9ed;
+    font-weight: bold;
+    padding: 2px;
+    color: #000;
+}
+
+#contact-wrapper {
+    width: 430px;
+    border: 1px solid #e2e2e2;
+    background: #f1f1f1;
+    padding: 20px;
+}
+
+#contact-wrapper div {
+    clear: both;
+    margin: 1em 0;
+}
+
+#contact-wrapper label {
+    display: block;
+    float: none;
+    font-size: 18px;
+    width: auto;
+}
+
+form#contactform input {
+    border-color: #B7B7B7 #E8E8E8 #E8E8E8 #B7B7B7;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+form#contactform textarea {
+    font-family: "Abel", arial, Tahoma, Helvetica, sans-serif;
+    font-size: 100%;
+    padding: 0.6em 0.5em 0.7em;
+    border-color: #B7B7B7 #E8E8E8 #E8E8E8 #B7B7B7;
+    border-style: solid;
+    border-width: 1px;
+}
+
+div.loginWrapper {
+    overflow: auto;
+}
+
+div.loginWrapper div.left {
+    float: left;
+    width: 620px;
+    font-size: 18px;
+}
+
+div.loginWrapper div.right {
+    float: right;
+    width: 240px;
+    height: 370px;
+}
+
+div.loginWrapper div.aboutECDB {
+    margin: 0 0 60px 0;
+}
+
+hr {
+    background-color: #999999;
+    border: 0 none;
+    height: 1px;
+    margin: 10px 0px;
+}
+
+.text.colorGray {
+    color: #999;
+}
+
+.text.styleItalic {
+    font-style: italic;
+}
+
+.text.fontSizeMedium {
+    font-size: 16px;
+}
+
+.boldText {
+    font-weight: bold;
+}
