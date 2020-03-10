@@ -16,7 +16,15 @@ Currently there is no detailed documentation available.
 - Create a MySQL database.
 - Import `ecdb.sql` database structure to your MySQL-database.
 - You will need to create a database user ECDB with a PASSWORD and grant all Priv's.  Easiest done with PHPmyadmin
-- Insert your MySQL data in the configuration file, `include/login/config.php`.
+
+----
+mysql -u root -p
+CREATE USER 'ecdb'@'%' IDENTIFIED BY 'user_password';
+GRANT ALL PRIVILEGES ON ecdb.* TO 'ecdb'@'localhost';
+exit
+----
+
+- Insert your MySQL credential data in the configuration file, `include/login/config.php`.
 - **You are now set to go!** The default username is `demo` and password `demo`.
 - Use the interface to create your own username and password, as needed.
 
