@@ -17,11 +17,10 @@ Currently there is no detailed documentation available.
 - Import `ecdb.sql` database structure to your MySQL-database.
 - You will need to create a database user ECDB with a PASSWORD and grant all Priv's.  Easiest done with PHPmyadmin
 
-
-  mysql -u root -p
-  CREATE USER 'ecdb'@'%' IDENTIFIED BY 'user_password';
-  GRANT ALL PRIVILEGES ON ecdb.* TO 'ecdb'@'localhost';
-  exit
+`mysql -u root -p`
+`CREATE USER 'ecdb'@'%' IDENTIFIED BY 'user_password';`
+`GRANT ALL PRIVILEGES ON ecdb.* TO 'ecdb'@'localhost';`
+`exit`
 
 
 - Insert your MySQL credential data in the configuration file, `include/login/config.php`.
