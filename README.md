@@ -37,6 +37,30 @@ Currently there is no detailed documentation available.
 - Updated for use with MySQL Version 5.5.57 or newer
 
 
+This is also known to work wit MariaDB and PHP7 with minor changes.
+
+Including:  Using a version of PHPMYADMIN that supports PHP7  (version 5+)
+
+Also, verify permissions and ownership on the /var/www/html directories.
+
+Currently, `www-data` is the default apache user on ubuntu flavors (like Raspberry Pi OS)  so this should be the owner your web files/directory to work properly.
+
+If you need to, you sould `chown` the whole web root as `www-data` for both user and group.
+
+So if your document root is `/var/www/html`, `cd` or change directory to `/var/www` and run this to change ownership on all files and directories.
+
+`chown -R www-data: html/`
+
+while still in the /var/www directory add write permissions to the group for files and directories by running this command.
+
+`find html -type f -exec chmod 664 {} + -o -type d -exec chmod 775 {} +`
+
+Finally add your local user account to the www-data group.  
+
+`usermod -a -G www-data $USER`
+
+You can also add an FTP user the same way replacing `$USER` with an actual account name.
+
 
 ## License
 
