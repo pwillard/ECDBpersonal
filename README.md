@@ -1,5 +1,7 @@
 # ECDBpersonal
 
+NOTE: While this works, it is outdated and the original source this was forked from became integrated into an official product.
+
 This is a personal version of ECDB by Pete Willard
 
 A personal edition of the ECDB tool which I have running on a local Raspberry Pi with an attached  WD PiDrive.  The changes to the original code are related to updating the SQL code to cope with the later versions of MYSQL that deprecated many functions.  The user interface changes are related to it being a personal edition and making use of FontAwesome and Jquery components.
