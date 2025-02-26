@@ -1,5 +1,7 @@
 # ECDBpersonal
 
+**** No Longer Supported ****
+
 NOTE: While this works, it is outdated and the original source this was forked from became integrated into an official product.
 
 This is a personal version of ECDB by Pete Willard
